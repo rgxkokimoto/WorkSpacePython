@@ -1,0 +1,10 @@
+
+nombre: pepinos
+Popole
+tiempo estimado: 14
+dificultad: Facil
+
+nombre: Macarrones
+Estan muy buenos
+tiempo estimado: 5
+dificultad: Media

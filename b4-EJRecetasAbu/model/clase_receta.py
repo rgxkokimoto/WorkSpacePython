@@ -9,9 +9,9 @@ class Receta:
     #To String
     def __str__(self):
         cadena = "nombre: " + self.nombre + "\n" 
-        "especificaciones: " + self.especificaciones + "\n" 
-        "tiempo estimado: " + self.tiempo_estimado + "\n" 
-        "dificultad: "+ self.dificultad
+        + self.especificaciones + "\n" 
+        "tiempo estimado: " + self.tiempo_estimado + "\n"
+        + "dificultad: "+ self.dificultad
         return cadena
 
 

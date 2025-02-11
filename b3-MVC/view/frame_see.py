@@ -20,6 +20,7 @@ class FrameSee(ttk.Frame):
         self.fs_label.configure(font=("Arial", 18, "bold"))
         self.fs_label.grid(row=0, column=0, columnspan=3, padx=5, pady=5, sticky='ew')
         
+        
         self.list_items = Variable(value=self.lista)
         self.listbox = Listbox(self, height=NUM_ITEMS_VIS, listvariable=self.list_items)
         self.listbox.grid(row=1, column=0, sticky='nes')

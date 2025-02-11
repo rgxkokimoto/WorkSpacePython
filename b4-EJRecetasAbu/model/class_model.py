@@ -11,13 +11,10 @@ class Model:
 
     def guardar(self,receta):
         f = open(NOMBRE_FICHERO, 'a')
-
-        cadena = "nombre: " + receta.nombre + "\n" 
-        "especificaciones: " + receta.especificaciones + "\n" 
-        "tiempo estimado: " + receta.tiempo_estimado + "\n" 
-        "dificultad: "+ receta.dificultad + "\n"
-
-        f.write(cadena)
+        f.write("\n" + "nombre: " + receta.nombre + "\n" 
+        + receta.especificaciones + "\n" 
+        "tiempo estimado: " + receta.tiempo_estimado + "\n"
+        + "dificultad: "+ receta.dificultad + "\n")
         f.close()
 
     def limpiar(self):
@@ -27,15 +24,15 @@ class Model:
         
     def leer(self):
         print("leer")
-        lista_productos = []
+        lista_recetas = []
         f = open(NOMBRE_FICHERO, 'r')
         linea = f.readline()
         cont = 0
         while linea != '':
             cont += 1
-            lista_productos.append(linea)
-            # print(linea)
+            lista_recetas.append(linea)
+            
             linea = f.readline()
 
         f.close()
-        return lista_productos
+        return lista_recetas

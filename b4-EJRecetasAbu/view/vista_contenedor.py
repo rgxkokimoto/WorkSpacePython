@@ -8,6 +8,10 @@ class FrameContenedor(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
         self.frame = None
+        # Ensanchamos el contenedor para que ocupe toda la ventana
+        self.grid(row=0, column=0, sticky="nsew")
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=1)
 
     # Método para seleccionar un frame
     def seleccionar_frame(self, frame):
