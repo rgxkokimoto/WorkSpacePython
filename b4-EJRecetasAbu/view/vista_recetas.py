@@ -43,6 +43,7 @@ class VistaReceta(ttk.Frame):
         self.lbl_especificaciones = ttk.Label(self, text="Especificaciones:" , relief="solid", anchor="center")
         self.lbl_especificaciones.grid(row=2, column=0, columnspan=2, sticky='nesw')
 
+        #! Para @Antonio esto es el componente diferente 
         self.atxt_especificaciones = Text(self, height=2)
         self.atxt_especificaciones.insert("1.0", "Especificaciónes :")
         self.atxt_especificaciones.grid(row=3, column=0,columnspan=2 , sticky='nesw')
@@ -68,8 +69,7 @@ class VistaReceta(ttk.Frame):
         self.cmb_lvl.grid(row=5, column=1,sticky="nesw")
         self.cmb_lvl.current(1)
 
-        self.btn_guardar = ttk.Button(self, text="Guardar")
-        self.btn_guardar.bind("<Button-1>", self.raton)
+        
         # self.btn_add = ttk.Button(self, text="Añadir Producto", command=self.guardar)
         self.btn_add = ttk.Button(self, text="Añadir Receta")
         # BINDING
@@ -77,6 +77,7 @@ class VistaReceta(ttk.Frame):
         self.btn_add.bind('<Return>', self.tecla) # Al pulsar enter
         self.btn_add.grid(row=6, column=0,columnspan=2, sticky='news')
 
+        #! Este componente es para enseñar cosas es diferente al especificaiones
         self.list_item = Variable(value=self.lista_recetas)
         self.listbox = Listbox(self, height=NUM_ITEMS_VIS, listvariable=self.list_item)
         self.listbox.grid(row=7, column=0, columnspan=2, sticky='nswe')
