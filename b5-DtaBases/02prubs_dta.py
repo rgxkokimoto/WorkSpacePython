@@ -5,7 +5,7 @@ cur = None
 
 # Establecer la conexión con la Base de Datos que creamos en postgres
 try:
-    con = psycopg2.connect(dbname="PRUEBA_DB", user="postgres", password="reguri34marwrt", host="127.0.0.1", port="5432", client_encoding="utf-8") # 
+    con = psycopg2.connect(dbname="PRUEBA_DB", user="postgres", password="reguri34marwrt", host="127.0.0.1", port="5432", client_encoding="utf-8")
     print("### conexión establecida")
 
     cur = con.cursor()
@@ -22,8 +22,8 @@ try:
     cur.execute('CREATE TABLE "TABLA_PRUEBAS" (ID Integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (INCREMENT 1 START 1 CACHE 4), DESCRIPCION text NOT NULL)')
     print("### tabla creada")
 
-    cur.execute('INSERT INTO "TABLA_PRUEBAS" (DESCRIPCION) VALUES (%s)', ('Prueba 1',))
-    cur.execute('INSERT INTO "TABLA_PRUEBAS" (DESCRIPCION) VALUES (%s)', ('Prueba 2',))
+    cur.execute('INSERT INTO "TABLA_PRUEBAS" (DESCRIPCION) VALUES (%s)', ('Prueba a',))
+    cur.execute('INSERT INTO "TABLA_PRUEBAS" (DESCRIPCION) VALUES (%s)', ('Prueba c',))
 
     #! No olvidar hacer commit para que los cambios se guarden en la Base de Datos
     con.commit()

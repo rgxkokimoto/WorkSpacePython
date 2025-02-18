@@ -26,4 +26,3 @@ finally:
     if con != None:
         con.close()
     print("### conexión cerrada")
-

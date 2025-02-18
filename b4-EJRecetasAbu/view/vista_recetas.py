@@ -120,5 +120,5 @@ class VistaReceta(ttk.Frame):
             return
         
         self.controlador.guardar(receta)
-        self.cargar_recetas(self.model.leer())
+        #self.cargar_recetas(self.model.leer())
         

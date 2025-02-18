@@ -39,15 +39,18 @@ class App(Tk):
         self.model = Model()
         self.model.limpiar()
 
+        
+        #! En este caso no es necesario el Frame vacío ni una lista si es vista unica 
+        
         self.lista_frames = {}
         self.lista_frames[0] = VistaVacia(self.contenedor)
         self.lista_frames[1] = VistaReceta(self.contenedor)
-
         # Añadir los frames al contenedor
         self.contenedor.seleccionar_frame(self.lista_frames[1])
-
+    
+        self.frame_ppal = VistaReceta(self.contenedor)
         # Crear el controlador y pasarle la vista y el modelo
-        self.controlador = Controlador(self.contenedor, self.model)
+        self.controlador = Controlador(self.contenedor, self.frame_ppal,self.model)
 
         # Presentar el controlador en las vistas que lo requieran
         self.lista_frames[1].set_controlador(self.controlador)
