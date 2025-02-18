@@ -1,3 +1,6 @@
+# Esta es una plantilla para la conexión a una Base de Datos PostgreSQL
+# Se debe tener en cuenta que se debe instalar psycopg2
+
 import psycopg2
 
 con = None

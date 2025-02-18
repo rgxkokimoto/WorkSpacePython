@@ -7,7 +7,7 @@ try:
     con = psycopg2.connect(dbname="PRUEBA_DB", user="postgres", password="reguri34marwrt", host="127.0.0.1", port="5432", client_encoding="utf-8")
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM TABLA_PRUEBAS")
+    cur.execute('SELECT * FROM "TABLA_PRUEBAS"')
     
     registros = cur.fetchall() #* fetchall() devuelve una lista de tuplas
 
@@ -15,7 +15,7 @@ try:
         print(registro)
 
     print("### Consulta con fetchone")
-    cur.execute("SELECT * FROM TABLA_PRUEBAS WHERE ID = 1")
+    cur.execute('SELECT * FROM "TABLA_PRUEBAS" WHERE ID = 1')
 
     continuar = True
     while continuar:
